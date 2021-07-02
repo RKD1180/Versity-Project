@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+<!--tablet details-->
+{% load static %} {% block title %}Buy Now{%endblock title %}
+<!--tablet details-->
+{% block main-content %}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group">
+        <a
+          href="{% url 'tablet' %}"
+          class="list-group-item list-group-item-action"
+          >All Tablet</a
+        >
+        <a
+          href="{% url 'tabletdata' 'Hp' %}"
+          class="list-group-item list-group-item-action"
+          >Hp</a
+        >
+        <a
+          href="{% url 'tabletdata' 'Asus' %}"
+          class="list-group-item list-group-item-action"
+          >Asus</a
+        >
+        <a
+          href="{% url 'tabletdata' 'Nokia' %}"
+          class="list-group-item list-group-item-action"
+          >Nokia</a
+        >
+        <a
+          href="{% url 'tabletdata' 'Xaomi' %}"
+          class="list-group-item list-group-item-action"
+          >Xaomi</a
+        >
+      </div>
+    </div>
+    <div class="col-sm-8 offset-sm-1">
+      <h2>OnlineShop Tablet</h2>
+
+      <div class="tablet_page">
+        {% for i in tablet %}
+        <a href="{% url 'product-detail' i.id %}" class="btn"
+          ><div class="item">
+            <img src="{{i.product_image.url}}" alt="" height="150px" />
+            <p class="fw-bold">{{i.title}}</p>
+            <br />
+            <p class="mb-dis fs-5" style="margin-top: -26px">
+              Rs. {{i.discount_price}}
+            </p>
+          </div></a
+        >
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}

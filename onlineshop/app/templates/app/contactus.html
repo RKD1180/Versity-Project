@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+<!-- Title -->
+{% load static %} {% block title %}About Us{% endblock title %}
+<!-- Title -->
+{% block main-content %}
+<div class="container my-5">
+  <div class="row">
+    <h3>Contact Us</h3>
+    <div class="col-sm-2 border-end">
+      <ul class="list-unstyled">
+        <li class="d-grid">
+          <a href="{% url 'orders' %}" class="btn btn-primary">Orders</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-9 offset-sm-1">
+      <div class="row">
+        <div class="col-sm-6">Order 1</div>
+        <div class="col-sm-6">Order 2</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}
