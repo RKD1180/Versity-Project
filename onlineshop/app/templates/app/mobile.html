@@ -2,11 +2,33 @@
 <!--Mobile details-->
 {% load static %} {% block title %}Buy Now{%endblock title %}
 <!--Mobile details-->
+<style>
+          {% block style %}
+             .item {
+          height: 300px;
+          width: 250px;
+          /* margin: 1px; */
+          padding: 14px;
+          border: 1px solid gray;
+          border-radius: 10px;
+          transition: 0.2s;
+    }
+    .item:hover{
+          box-shadow: 1px 0px 7px 1px;
+
+    }
+    .item img {
+
+      height: 141px;
+      width: 224px;
+  }
+          {% endblock style %}
+</style>
 {% block main-content %}
-<div class="container my-5">
+<div class="container">
   <div class="row">
     <div class="col-sm-3">
-      <div class="list-group">
+      <div class="list-group mt-5" style="margin-top: 6rem !important">
         <a
           href="{% url 'mobile' %}"
           class="list-group-item list-group-item-action"
@@ -29,7 +51,7 @@
         >
       </div>
     </div>
-    <div class="col-sm-8 offset-sm-1">
+    <div class="col-sm-8 offset-sm-1" style="margin-top: 6rem !important">
       <h2>OnlineShop Mobile</h2>
 
       <div class="mobile_page">

@@ -23,3 +23,13 @@
  font-size: 24px;
  font-weight: bold;
 }
+
+/* items */
+.item {
+    height: 300px;
+    width: 250px;
+    /* margin: 1px; */
+    padding: 14px;
+    border: 1px solid gray;
+    box-shadow: 1px 0px 7px 1px;
+}
